@@ -1,6 +1,11 @@
 const menuToggle = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('.site-nav');
 
+const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('.site-nav a[data-page]').forEach((link) => {
+  link.classList.toggle('active', link.dataset.page === currentPage);
+});
+
 if (menuToggle && siteNav) {
   menuToggle.addEventListener('click', () => {
     const isOpen = siteNav.classList.toggle('open');

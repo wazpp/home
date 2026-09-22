@@ -100,7 +100,12 @@ h3 { margin: 0; font-size: 2rem; line-height: 1; }
 .cta-box { padding: 28px; background: var(--green); color: var(--white); }
 .cta-box p { margin: 0 0 22px; color: rgba(255,255,255,0.78); }
 .cta-box .button { border-color: var(--lime); background: var(--lime); color: var(--ink); }
-.site-footer { display: flex; justify-content: space-between; gap: 20px; padding: 22px 0 30px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.64rem; }
+.site-footer { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 24px; padding: 22px 0 30px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.64rem; }
+.footer-links { display: flex; justify-content: center; gap: 20px; }
+.footer-links a { transition: color 180ms ease; }
+.footer-links a:hover, .footer-links a:focus-visible { color: var(--green); }
+.footer-links a, .status { white-space: nowrap; }
+.site-footer .status { justify-self: end; }
 .status { color: var(--green); }
 
 @media (max-width: 760px) {
@@ -120,5 +125,6 @@ h3 { margin: 0; font-size: 2rem; line-height: 1; }
   .band { padding: 60px 0; }
   .contact-form { padding: 22px; }
   .site-footer { display: block; }
-  .site-footer span { display: block; margin-top: 8px; }
+  .footer-links { justify-content: flex-start; margin: 12px 0; }
+  .site-footer .status { display: block; }
 }
