@@ -45,12 +45,17 @@ h3 { margin: 0; font-size: 2rem; line-height: 1; }
 .orbital::before, .orbital::after { content: ""; position: absolute; border: 1px solid var(--line); border-radius: 50%; transform: rotate(-24deg); }
 .orbital::before { width: 88%; height: 58%; }
 .orbital::after { width: 60%; height: 88%; }
-.core { position: relative; z-index: 1; width: min(305px, 72vw); aspect-ratio: 1; display: grid; place-items: center; border-radius: 50%; background: var(--lime); box-shadow: var(--shadow); text-align: center; }
-.core strong { display: block; font-size: clamp(3.2rem, 6vw, 5rem); line-height: 0.85; letter-spacing: -0.08em; }
+.core { position: relative; z-index: 1; width: min(305px, 72vw); aspect-ratio: 1; display: grid; place-items: center; border-radius: 50%; background: var(--lime); box-shadow: var(--shadow); text-align: center; animation: logo-orbit 5s ease-in-out infinite; }
+.hero-logo-mark { position: relative; width: 78px; height: 86px; overflow: hidden; animation: logo-breathe 3.6s ease-in-out infinite; }
+.hero-logo-mark img { position: absolute; top: 0; left: 0; width: 286px; max-width: none; height: 85px; }
+.hero-logo-mark::after { content: ""; position: absolute; top: 0; right: 0; bottom: 0; width: 10px; background: var(--lime); }
 .core small { display: block; max-width: 140px; margin-top: 18px; font: 700 0.62rem "Trebuchet MS", Arial, sans-serif; letter-spacing: 0.12em; text-transform: uppercase; }
 .spark { position: absolute; width: 12px; height: 12px; background: var(--green); transform: rotate(45deg); }
 .spark.one { top: 17%; right: 13%; }
 .spark.two { bottom: 13%; left: 12%; width: 8px; height: 8px; background: var(--ink); }
+@keyframes logo-orbit { 0%, 100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-12px) rotate(2deg); } }
+@keyframes logo-breathe { 0%, 100% { transform: scale(0.94); filter: drop-shadow(0 7px 0 rgba(8,123,95,0.12)); } 50% { transform: scale(1.06); filter: drop-shadow(0 14px 8px rgba(8,123,95,0.2)); } }
+@media (prefers-reduced-motion: reduce) { .core, .hero-logo-mark { animation: none; } }
 
 .section { padding: 28px 0 112px; }
 .section-head { display: flex; align-items: end; justify-content: space-between; gap: 28px; padding-bottom: 25px; border-bottom: 1px solid var(--line); }
