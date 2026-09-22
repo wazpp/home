@@ -20,7 +20,7 @@ button, input, textarea { font: inherit; }
 
 .site-header { padding: 26px 0; border-bottom: 1px solid var(--line); }
 .nav-wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-.logo { display: inline-flex; align-items: center; width: 142px; }
+.logo { display: inline-flex; align-items: center; width: 172px; }
 .logo img { display: block; width: 100%; height: auto; mix-blend-mode: multiply; }
 .site-nav { display: flex; align-items: center; gap: 27px; font-size: 0.7rem; }
 .site-nav a { color: var(--muted); transition: color 180ms ease; }
