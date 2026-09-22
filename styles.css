@@ -20,8 +20,8 @@ button, input, textarea { font: inherit; }
 
 .site-header { padding: 26px 0; border-bottom: 1px solid var(--line); }
 .nav-wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-.logo { font: 700 1.4rem "Trebuchet MS", Arial, sans-serif; letter-spacing: -0.06em; }
-.logo span { color: var(--green); }
+.logo { display: inline-flex; align-items: center; width: 142px; }
+.logo img { display: block; width: 100%; height: auto; mix-blend-mode: multiply; }
 .site-nav { display: flex; align-items: center; gap: 27px; font-size: 0.7rem; }
 .site-nav a { color: var(--muted); transition: color 180ms ease; }
 .site-nav a:hover, .site-nav a:focus-visible, .site-nav a.active { color: var(--green); }
